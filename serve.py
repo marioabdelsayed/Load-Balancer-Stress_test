@@ -8,7 +8,7 @@ def seedFunc():
     if request.method == 'GET':
         return socket.gethostname();
     if request.method == 'POST':
-        stress_test = subprocess.popen(["sudo","python3","stress_cpu.py"]);
+        stress_test = subprocess.Popen(["sudo","python3","stress_cpu.py"]);
 
 if __name__ == "__main__":
     app.run()
